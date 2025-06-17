@@ -17,6 +17,8 @@ html {
   --color-border: #d1d1d1;
   --color-hero-bg: #00aaff;
 
+  --color-white: #ffffff; /* Такие штуки тоже нужно в переменные вынести.*/
+
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Inter', sans-serif;
 
@@ -61,10 +63,16 @@ body {
   text-decoration: none;
   display: inline-block;
   margin-top: var(--gap-medium);
+
+  font-weight: 500; /* улучшает читаемость. */
+  min-width: 120px; /* Защита от сжатия. предотвращает "сплющивание" кнопки на маленьких экранах. */
 }
 
 .button:hover {
-  background-color: #3a22c9;
+  /* background-color: #3a22c9; */
+  /* а в переменную вынести? какой нить --color-accent-blue */
+  background-color: color-mix(in srgb, var(--color-primary), black 15%);
+  /* color-mix делает hover-эффект системным (не требует новой переменной). */
 }
 
 .hero {
@@ -82,6 +90,17 @@ body {
   flex-wrap: wrap;
 }
 
+/* На мобильных контент будет в колонке, а не в строке. Просто пример */
+@media (max-width: 768px) {
+  .hero__content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero__text, .hero__image {
+    flex-basis: 100%;
+  }
+}
+
 .hero__text {
   flex: 1 1 500px;
 }
@@ -95,7 +114,7 @@ body {
 .hero__text p {
   font-size: 18px;
   margin-bottom: var(--gap-small);
-  line-height: 1.5;
+  line-height: 1.5; /* полтора чего? */
 }
 
 .hero__image {
