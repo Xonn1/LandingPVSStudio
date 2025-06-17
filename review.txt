@@ -1,0 +1,36 @@
+- line-height нигде не прописан (покажу на созвоне)
+- не учтены маленькие экраны (респонсивность) я про br в тексте (нафига он?)
+- капс в именах файлов плохо (если ты не виндузятник)
+
+----
+/* Было */
+.hero__text h1 { ... }
+
+/* Стало */
+h1 {
+  font-size: var(--font-size-h1);
+  font-family: var(--font-heading);
+  line-height: 1.2em;
+  margin-bottom: var(--gap-medium);
+}
+
+Зачем: Избежать дублирования стилей для h2/h3 в будущем.
+----
+.button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+Зачем: Соответствие WCAG. Видимый фокус важен для клавиатурной навигации.
+Заодно не плохо будет узнать что такое акцесабилити, какое бывает и как чекать его.
+----
+:root {
+-  --font-main: 'Inter', sans-serif;
+-  --font-heading: 'Inter', sans-serif;
++  --font-base: 'Inter', sans-serif; /* Общая переменная */
+}
+
+body {
+-  font-family: var(--font-main);
++  font-family: var(--font-base);
+}
+Зачем: Если шрифты одинаковые, избыточно дублировать переменные.
