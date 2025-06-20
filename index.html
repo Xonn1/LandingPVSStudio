@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PVS-Studio Landing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,14 +12,12 @@
   <header class="hero">
     <div class="container hero__content">
       <div class="hero__text">
-        <h1>Статический анализатор<br>PVS-Studio как SAST-решение</h1>
+        <h1>Статический анализатор PVS-Studio как SAST-решение</h1>
         <p>
-          Выявляет не только опечатки, мёртвый код и другие ошибки,<br>
-          но и потенциальные уязвимости (<strong>Static Application Security Testing</strong>).
+          Выявляет не только опечатки, мёртвый код и другие ошибки, но и потенциальные уязвимости <strong>(Static Application Security Testing)</strong>.
         </p>
         <p>
-          Отображает предупреждения на <strong>Common Weakness Enumeration</strong>,<br>
-          <strong>SEI CERT Coding Standards</strong>, а также поддерживает стандарт <strong>MISRA</strong>.
+          Отображает предупреждения на <strong>Common Weakness Enumeration</strong>, <strong>SEI CERT Coding Standards</strong>, а также поддерживает стандарт <strong>MISRA</strong>.
         </p>
         <a href="#footer" class="button">Связаться с нами</a>
       </div>
@@ -29,11 +27,45 @@
     </div>
   </header>
 
-  <footer id="footer">
+  <section class="accordion-section">
     <div class="container">
-      <p>&copy; 2025 PVS-Studio</p>
+      <h2>Классификация предупреждений</h2>
+
+      <div class="accordion">
+        <button class="accordion-header">ГОСТ Р 71207-2024 <span class="icon">▼</span></button>
+        <div class="accordion-content">
+          <p>Для выстраивания процесса безопасной разработки по ГОСТ Р 56939—2024 необходимо проводить регулярный поиск уязвимостей на этапе эксплуатации жизненного цикла ПО.</p>
+          <p>Инструментальное средство PVS-Studio разрабатывается с учётом требований ГОСТ Р 71207–2024 и может использоваться при разработке безопасного ПО.</p>
+          <p>Применяется в сертификационных лабораториях, аккредитованных в системах сертификации ФСТЭК России.</p>
+          <p>В 2025 году PVS-Studio участвует в <a href="#">испытаниях ФСТЭК</a> для выработки единой методики соответствия требованиям ГОСТ.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header">Соответствие OWASP ASVS <span class="icon">▼</span></button>
+        <div class="accordion-content">
+          <p>Стандарт OWASP ASVS — список требований к безопасности приложений и тестов.</p>
+          <p><a href="#">Классификация предупреждений PVS-Studio согласно OWASP</a></p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header">Соответствие CWE <span class="icon">▼</span></button>
+        <div class="accordion-content">
+          <p>Common Weakness Enumeration — систематизированный список типичных уязвимостей в ПО.</p>
+          <p>PVS-Studio связывает свои предупреждения с CWE, упрощая интерпретацию анализа.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header">Соответствие SEI CERT <span class="icon">▼</span></button>
+        <div class="accordion-content">
+          <p>SEI CERT Coding Standards — устранение распространённых уязвимостей в коде.</p>
+          <p>PVS-Studio проверяет соответствие этим стандартам для языков C, C++, Java.</p>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
   <script src="js/main.js"></script>
 </body>
