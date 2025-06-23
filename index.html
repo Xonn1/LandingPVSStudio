@@ -1,72 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PVS-Studio Landing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PVS-Studio Security</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="hero">
-    <div class="container hero__content">
+<section class="hero">
+  <div class="container">
+    <div class="row">
       <div class="hero__text">
-        <h1>Статический анализатор PVS-Studio как SAST-решение</h1>
-        <p>
-          Выявляет не только опечатки, мёртвый код и другие ошибки, но и потенциальные уязвимости <strong>(Static Application Security Testing)</strong>.
+        <h1>Статический анализатор<br>PVS‑Studio как SAST‑решение</h1>
+        <p>Выявляет не только опечатки, мёртвый код и другие ошибки, но и потенциальные уязвимости
+          <span class="bold">(Static Application Security Testing)</span>.
+          Отображает предупреждения на <span class="bold">Common Weakness Enumeration</span>,
+          <span class="bold">SEI CERT Coding Standards</span>, а также поддерживает стандарт <span class="bold">MISRA</span>.
         </p>
-        <p>
-          Отображает предупреждения на <strong>Common Weakness Enumeration</strong>, <strong>SEI CERT Coding Standards</strong>, а также поддерживает стандарт <strong>MISRA</strong>.
-        </p>
-        <a href="#footer" class="button">Связаться с нами</a>
+        <a href="#footer" class="btn scroll-to">Связаться с нами</a>
       </div>
-      <div class="hero__image">
-        <img src="assets/image/unicorn.png" alt="Маскот PVS-Studio" />
+      <div class="hero__img-wrapper">
+        <img src="assets/image/unicorn.png" alt="Unicorn" class="hero__img">
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section class="accordion-section">
-    <div class="container">
-      <h2>Классификация предупреждений</h2>
+<section class="accordion">
+  <div class="container">
+    <h2>Классификация предупреждений</h2>
 
-      <div class="accordion">
-        <button class="accordion-header">ГОСТ Р 71207-2024 <span class="icon">▼</span></button>
-        <div class="accordion-content">
-          <p>Для выстраивания процесса безопасной разработки по ГОСТ Р 56939—2024 необходимо проводить регулярный поиск уязвимостей на этапе эксплуатации жизненного цикла ПО.</p>
-          <p>Инструментальное средство PVS-Studio разрабатывается с учётом требований ГОСТ Р 71207–2024 и может использоваться при разработке безопасного ПО.</p>
-          <p>Применяется в сертификационных лабораториях, аккредитованных в системах сертификации ФСТЭК России.</p>
-          <p>В 2025 году PVS-Studio участвует в <a href="#">испытаниях ФСТЭК</a> для выработки единой методики соответствия требованиям ГОСТ.</p>
-        </div>
+    <div class="accordion__item">
+      <div class="accordion__header">
+        ГОСТ Р 71207-2024
+        <img src="assets/image/downnn.svg" class="icon">
       </div>
-
-      <div class="accordion">
-        <button class="accordion-header">Соответствие OWASP ASVS <span class="icon">▼</span></button>
-        <div class="accordion-content">
-          <p>Стандарт OWASP ASVS — список требований к безопасности приложений и тестов.</p>
-          <p><a href="#">Классификация предупреждений PVS-Studio согласно OWASP</a></p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-header">Соответствие CWE <span class="icon">▼</span></button>
-        <div class="accordion-content">
-          <p>Common Weakness Enumeration — систематизированный список типичных уязвимостей в ПО.</p>
-          <p>PVS-Studio связывает свои предупреждения с CWE, упрощая интерпретацию анализа.</p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-header">Соответствие SEI CERT <span class="icon">▼</span></button>
-        <div class="accordion-content">
-          <p>SEI CERT Coding Standards — устранение распространённых уязвимостей в коде.</p>
-          <p>PVS-Studio проверяет соответствие этим стандартам для языков C, C++, Java.</p>
-        </div>
+      <div class="accordion__body">
+        <p>
+          Для выстраивания процесса безопасной разработки по ГОСТ Р 56939—2024 необходимо проводить регулярный поиск уязвимостей на этапе эксплуатации жизненного цикла ПО. В состав применяемых инструментальных средств разработчик ПО должен включать статический анализатор кода.
+        </p>
+        <p>
+          Инструментальное средство PVS-Studio разрабатывается с учётом требований, предъявляемых к статическим анализаторам в ГОСТ Р 71207–2024, выявляет критические ошибки и может использоваться при разработке безопасного программного обеспечения.
+        </p>
+        <p>
+          Статический анализатор PVS-Studio успешно применяется в рамках работ по сертификационным испытаниям программных продуктов в лабораториях, аккредитованных в системах сертификации средств защиты информации ФСТЭК России.
+        </p>
+        <p>
+          В 2025 году PVS-Studio принимает участие в "Испытаниях статических анализаторов исходных кодов компилируемых и динамических языков программирования под руководством ФСТЭК России", проводимых с целью выработки единой методики для определения соответствия инструментов требованиям ГОСТ Р 71207-2024.
+        </p>
       </div>
     </div>
-  </section>
 
-  <script src="js/main.js"></script>
+    <div class="accordion__item">
+      <div class="accordion__header">
+        Соответствие OWASP ASVS
+        <img src="assets/image/downnn.svg" class="icon">
+      </div>
+      <div class="accordion__body">
+        <p>
+          Стандарт OWASP Application Security Verification Standard (ASVS) — это список требований к безопасности приложений и тестов, которые могут использоваться архитекторами ПО, разработчиками, тестировщиками, специалистами по защищённости приложений, продавцами инструментов и пользователями для разработки, сборки, тестирования и верификации защищённых приложений.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion__item">
+      <div class="accordion__header">
+        Соответствие CWE
+        <img src="assets/image/downnn.svg" class="icon">
+      </div>
+      <div class="accordion__body">
+        <p>
+          CWE (Common Weakness Enumeration) - это структурированный список общих уязвимостей и недостатков безопасности в программном и аппаратном обеспечении.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion__item">
+      <div class="accordion__header">
+        Соответствие SEI CERT
+        <img src="assets/image/downnn.svg" class="icon">
+      </div>
+      <div class="accordion__body">
+        <p>
+          SEI CERT — набор стандартов написания программного обеспечения (ПО) на языках C, C++, Java и Perl
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <h2>Заинтересованы? Заполните форму обратной связи или свяжитесь с нашим менеджером самостоятельно</h2>
+    <div class="contact__buttons">
+      <button class="btn btn--white" data-scroll="footer">Заполнить форму</button>
+      <button class="btn btn--transparent" data-scroll="footer">Связаться с нами</button>
+    </div>
+  </div>
+</section>
+
+<script src="js/main.js"></script>
 </body>
 </html>
